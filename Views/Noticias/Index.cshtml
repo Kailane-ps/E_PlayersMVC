@@ -2,7 +2,7 @@
 @{
     ViewData["Titulo"] = "Noticias";
 }
-<form action="@Url.Action("Publicar")" method="post">
+<form action="@Url.Action("Publicar")" method="post"  enctype="multipart/form-data">
 
     <label for="IdNoticias">IdNoticias</label>
     <input type="text" name="IdNoticias" id="IdNoticias">
@@ -14,7 +14,7 @@
     <input type="text" name="Texto" id="Texto">
 
     <label for="Imagem">Imagem</label>
-    <input type="text" name="Imagem" id="Imagem">
+    <input type="file" name="Imagem" id="Imagem">
 
     <button type="submit">Publicar</button>
 
@@ -34,7 +34,12 @@
                 <td>@n.IdNoticias</td>
                 <td>@n.Titulo</td>
                 <td>@n.Texto</td>
-                <td>@n.Imagem</td>
+                <td>
+                     <img src="img/Noticias/@n.Imagem" alt="Imagem da noticia @n.Titulo">
+                </td>
+                <td>
+                     <a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@n.IdNoticias">Excluir</a>
+                </td>
             </tr>
         }
     </tbody>

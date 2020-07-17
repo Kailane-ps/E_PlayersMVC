@@ -28,7 +28,7 @@ namespace E_PlayersMVC.Controllers
             equipe.Nome     = form["Nome"];
 
             //Upload da imagem
-             var file    = form.Files[0];
+            var file    = form.Files[0];
             var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
 
             if(file != null)
@@ -56,7 +56,7 @@ namespace E_PlayersMVC.Controllers
 
         }
 
-        [Route("Equipe/{id}")]
+        [Route("controller/{id}")]
 
         public IActionResult Excluir(int id)
         {

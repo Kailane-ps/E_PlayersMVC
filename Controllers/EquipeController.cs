@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,11 +9,11 @@ using E_PlayersMVC.Models;
 
 namespace E_PlayersMVC.Controllers
 {
-    public class HomeController : Controller
+    public class EquipeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public EquipeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
@@ -35,3 +35,4 @@ namespace E_PlayersMVC.Controllers
         }
     }
 }
+ 

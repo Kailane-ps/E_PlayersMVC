@@ -1,6 +1,6 @@
 using System;
 
-namespace NOVO.Models
+namespace E_PlayersMVC.Models
 {
     public class ErrorViewModel
     {

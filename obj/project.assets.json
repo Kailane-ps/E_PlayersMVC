@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kailane\\Desktop\\NOVO\\NOVO.csproj",
-      "projectName": "NOVO",
-      "projectPath": "C:\\Users\\Kailane\\Desktop\\NOVO\\NOVO.csproj",
+      "projectUniqueName": "C:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\E_PlayersMVC.csproj",
+      "projectName": "E_PlayersMVC",
+      "projectPath": "C:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\E_PlayersMVC.csproj",
       "packagesPath": "C:\\Users\\Kailane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kailane\\Desktop\\NOVO\\obj\\",
+      "outputPath": "C:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kailane\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\NOVO.csproj",
+  "FilePath": "c:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\E_PlayersMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20518,7 +20518,7 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "NOVO",
+  "RootNamespace": "E_PlayersMVC",
   "Documents": [
     {
       "FilePath": "c:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\Views\\Home\\Privacy.cshtml",

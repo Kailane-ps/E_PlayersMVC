@@ -36,7 +36,7 @@ namespace E_PlayersMVC.Models
 
         public List<Noticias> ReadAll()
         {
-            List<Noticias> news = new List<Noticias>();
+            List<Noticias> News = new List<Noticias>();
             string[] linhas = File.ReadAllLines(PATH);
             
             foreach (var item in linhas)
@@ -45,12 +45,12 @@ namespace E_PlayersMVC.Models
                 Noticias report   = new Noticias();
                 report.IdNoticias = Int32.Parse(linha[0]);
                 report.Titulo     = linha[1];
-                report.Texto      = linha[1];
-                report.Imagem     = linha[2];
+                report.Texto      = linha[2];
+                report.Imagem     = linha[3];
 
-                news.Add(report);
+                News.Add(report);
             }
-            return news;
+            return News;
         }
 
         public void Update(Noticias n)

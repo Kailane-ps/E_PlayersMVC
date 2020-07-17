@@ -30,6 +30,7 @@ namespace E_PlayersMVC.Controllers
 
             //Upload da imagem
             var file    = form.Files[0];
+
             var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Noticias");
 
             if(file != null)

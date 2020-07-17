@@ -14,7 +14,7 @@
     <input type="text" name="Texto" id="Texto">
 
     <label for="Imagem">Imagem</label>
-    <input type="file" name="Imagem" id="Imagem">
+    <input type="File" name="Imagem" id="Imagem">
 
     <button type="submit">Publicar</button>
 
@@ -35,7 +35,7 @@
                 <td>@n.Titulo</td>
                 <td>@n.Texto</td>
                 <td>
-                     <img src="img/Noticias/@n.Imagem" alt="Imagem da noticia @n.Titulo">
+                    <img src="/img/Noticias/@n.Imagem" alt="Imagem da noticia @n.Titulo">
                 </td>
                 <td>
                      <a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@n.IdNoticias">Excluir</a>

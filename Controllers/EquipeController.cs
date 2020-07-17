@@ -6,33 +6,34 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using E_PlayersMVC.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace E_PlayersMVC.Controllers
 {
     public class EquipeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public EquipeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        
+        Equipe equipeModel = new Equipe();
         public IActionResult Index()
         {
+            ViewBag.Equipe = equipeModel.ReadAll();
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Cadastrar(IFormCollection form)
         {
-            return View();
+            Equipe equipe   = new Equipe();
+            equipe.IdEquipe = Int32.Parse(form["IdEquipe"]);
+            equipe.Nome     = form["Nome"];
+            equipe.Imagem   = form["Imagem"];
+
+            equipeModel.Create(equipe);
+
+            ViewBag.Equipe = equipeModel.ReadAll();
+             return LocalRedirect("~/Equipe");
+
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
  

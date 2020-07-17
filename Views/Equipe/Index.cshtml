@@ -1,27 +1,39 @@
 @model Equipe
 @{
-    ViewData["Titulo"] = "Equipes";
+    ViewData["Title"] = "Equipes";
 }
-<form action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
 
-    <label for="IdEquipe">IdEquipe</label>
-    <input type="text" name="IdEquipe" id="IdEquipe">
+    <div class="titulo_pagina">
+        <h1>cadastro de @ViewData["Title"]</h1>
+    </div>
 
-    <label for="Nome">Nome</label>
-    <input type="text" name="Nome" id="Nome">
+<form class="cadastro" action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
 
-    <label for="Imagem">Imagem</label>
-    <input type="file" name="Imagem" id="Imagem">
+    <div class="campo">
+        <label for="IdEquipe">IdEquipe</label>
+        <input type="text" name="IdEquipe" id="IdEquipe">
+    </div>
 
-    <button type="submit">Cadastrar</button>
+    <div class="campo">
+        <label for="Nome">Nome</label>
+        <input type="text" name="Nome" id="Nome">
+    </div>
+
+    <div class="campo">
+        <label for="Imagem">Imagem</label>
+        <input type="file" name="Imagem" id="Imagem">
+    </div>
+
+    <button class="gradient btn" type="submit">Cadastrar</button>
 
 </form>
 
-<table class="table table-striped table-responsive">
+<table>
     <thead>
         <th>Id</th>
         <th>Nome</th>
         <th>Imagem</th>
+        <th>Açãos</th>
     </thead>
     <tbody>
         @foreach (var e in ViewBag.Equipe)
@@ -33,7 +45,9 @@
                     <img src="img/Equipes/@e.Imagem" alt="Imagem da equipe @e.Nome">
                 </td>
                 <td>
-                    <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@e.IdEquipe">Excluir</a>
+                    <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@e.IdEquipe">
+                        <i class="fa fa-trash"></i>
+                    </a>
                 </td>
             </tr>
         }

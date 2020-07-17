@@ -20521,11 +20521,6 @@
   "RootNamespace": "E_PlayersMVC",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Kailane\\Desktop\\E_PlayersMVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

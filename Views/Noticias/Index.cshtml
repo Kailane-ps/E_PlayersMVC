@@ -1,31 +1,46 @@
 @model Noticias
 @{
-    ViewData["Titulo"] = "Noticias";
+    ViewData["Title"] = "Noticias";
 }
-<form action="@Url.Action("Publicar")" method="post"  enctype="multipart/form-data">
 
-    <label for="IdNoticias">IdNoticias</label>
-    <input type="text" name="IdNoticias" id="IdNoticias">
+   <div class="titulo_pagina">
+        <h1>cadastro de @ViewData["Title"]</h1>
+    </div>
 
-    <label for="Titulo">Titulo</label>
-    <input type="text" name="Titulo" id="Titulo">
+<form  class="cadastro" action="@Url.Action("Publicar")" method="post"  enctype="multipart/form-data">
 
-    <label for="Texto">Texto</label>
-    <input type="text" name="Texto" id="Texto">
+    <div class="campo">
+        <label for="IdNoticias">IdNoticias</label>
+        <input type="text" name="IdNoticias" id="IdNoticias">
+    </div>
 
-    <label for="Imagem">Imagem</label>
-    <input type="File" name="Imagem" id="Imagem">
+    <div class="campo">
+        <label for="Titulo">Titulo</label>
+        <input type="text" name="Titulo" id="Titulo">
+    </div>
 
-    <button type="submit">Publicar</button>
+    <div class="campo">
+        <label for="Texto">Texto</label>
+        <input type="text" name="Texto" id="Texto">
+    </div>
+
+    <div class="campo">
+        <label for="Imagem">Imagem</label>
+        <input type="File" name="Imagem" id="Imagem">
+    </div>
+    
+
+    <button class="gradient btn" type="submit">Publicar</button>
 
 </form>
 
-<Table class="table table-striped table-responsive">
+<Table>
     <thead>
         <th>Id</th>
         <th>Titulo</th>
         <th>Texto</th>
         <th>Imagem</th>
+        <th>Açãos</th>
     </thead>
     <tbody>
         @foreach (var n in ViewBag.Noticias)
@@ -38,7 +53,9 @@
                     <img src="/img/Noticias/@n.Imagem" alt="Imagem da noticia @n.Titulo">
                 </td>
                 <td>
-                     <a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@n.IdNoticias">Excluir</a>
+                     <a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@n.IdNoticias">
+                        <i class="fa fa-trash"></i>
+                     </a>
                 </td>
             </tr>
         }
